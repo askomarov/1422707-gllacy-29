@@ -3,25 +3,27 @@
 
 <head>
   <meta charset="utf-8">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Глейси - каталог</title>
 </head>
 
 <body>
   <header class="header">
     <nav class="header__nav">
-      <a class="header__logo">
+      <a href="index.html" class="header__logo">
         <img src="img/index-logo.svg" width="154" height="64" alt="Логотип магазина мороженого Глэйси">
       </a>
       <ul class="header__menu">
         <li>
-          <a class="header__link" href="blank.html">Каталог</a>
+          <a class="header__link header__link--active">Каталог</a>
           <ul class="header__submenu submenu-catalog">
             <li class="submenu-catalog__list submenu-catalog__list--title">
               <!-- не понял ссылка это или просто текст -->
-              <a href="#" class="submenu-catalog__text">новинки</a>
+              <a class="submenu-catalog__text">новинки</a>
             </li>
             <li class="submenu-catalog__list">
-              <a class="submenu-catalog__link" href="catalog.html">Сливочное</a>
+              <a class="submenu-catalog__link submenu-catalog__link--active">Сливочное</a>
             </li>
             <li class="submenu-catalog__list">
               <a class="submenu-catalog__link" href="catalog.html">Щербеты</a>
@@ -40,7 +42,7 @@
       <ul class="header__actions header-actions">
         <li class="header-actions__list">
           <a class="header__link header-actions__link header-actions__link--search">форма поиска</a>
-          <label class="header__submenu search" for="search">
+          <label class="header__submenu search-form" for="search">
             <input class="header-actions__input--search main-input" type="search" name="search" id="search"
               placeholder="Крем-брюле">
           </label>
@@ -55,8 +57,8 @@
             <div class="login-form__footer">
               <button class="login-form__btn main-btn" type="submit">Войти</button>
               <div class="login-form__help">
-                <a href="#" class="login-form__forgot-password">Забыли пароль?</a>
-                <a href="#" class="login-form__registration">Новая регистрация</a>
+                <a href="#" class="login-form__forgot-password text-link--black">Забыли пароль?</a>
+                <a href="#" class="login-form__registration text-link--black">Новая регистрация</a>
               </div>
             </div>
           </form>
@@ -102,23 +104,24 @@
       <div class="catalog__container container">
         <ul class="catalog__breadcrumbs-menu">
           <li>
-            <a href="" class="catalog__breadcrumbs-link">главная</a>
+            <a href="" class="catalog__breadcrumbs-link text-link">Главная</a>
           </li>
           <li>
-            <a href="" class="catalog__breadcrumbs-link">каталог/a>
+            <a href="" class="catalog__breadcrumbs-link text-link">Каталог</a>
           </li>
           <li>
             <a class="catalog__breadcrumbs-link catalog__breadcrumbs-link--active">Сливочное</a>
           </li>
         </ul>
         <h2 class="catalog__title">Сливочное мороженое</h2>
-        <form action="" method="" class="catalog__filter filter">
+        <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__filter filter">
+          <!-- здесь будет фильтр -->
         </form>
         <ul class="catalog__list">
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с апельсином"></img>
             <p class="ice-item__price">310 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочное с апельсиновым<br>джемом и цитрусовой стружкой</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -126,7 +129,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочно-кофейное"></img>
             <p class="ice-item__price">380 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочно-кофейное с кусочками шоколада</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -134,7 +137,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочно крем-брюле"></img>
             <p class="ice-item__price">355 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочно-клубничное<br>с присыпкой из белого шоколада</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -142,7 +145,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочно-кофейное"></img>
             <p class="ice-item__price">415 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочное крем-брюле<br>с карамельной подливкой</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -150,7 +153,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с брусничным"></img>
             <p class="ice-item__price">325 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочное с брусничным джемом</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -158,7 +161,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с черникой"></img>
             <p class="ice-item__price">410 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочно-черничное с цельными ягодами черники</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -166,7 +169,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочно-лимонное"></img>
             <p class="ice-item__price">315 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочно-лимонное с карамельной присыпкой</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -174,7 +177,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с шоколадом"></img>
             <p class="ice-item__price">320 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочное с шоколадной стружкой</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -182,7 +185,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочно-ванильное"></img>
             <p class="ice-item__price">440 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочно-ванильное <br>с кусочками шоколада</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -190,7 +193,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с ментолом"></img>
             <p class="ice-item__price">435 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочноe с ментоловым <br> сиропом</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -198,7 +201,7 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с кусочками черного шоколада"></img>
             <p class="ice-item__price">355 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочное с кусочками черного шоколада</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
@@ -206,30 +209,31 @@
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="" alt="Сливочное с мятным сиропом"></img>
             <p class="ice-item__price">355 &#8399;<span>/кг</span></p>
-            <a href="#" class="ice-item__description">
+            <a href="#" class="ice-item__description text-link">
               <h3>Сливочное с мятным сиропом</h3>
             </a>
             <a href="#" class="ice-item__link main-btn">Быстрый просмотр</a>
           </li>
         </ul>
-        <ul class="catalog__pagination">
+        <ul class="catalog__pagination catalog-pagination">
           <li>
-            <a>назад</a>
+            <a
+              class="catalog-pagination__link catalog-pagination__link--not-active catalog-pagination__arrow catalog-pagination__arrow--prev">назад</a>
           </li>
           <li>
-            <a>1</a>
+            <a class="catalog-pagination__link catalog-pagination__link--active">1</a>
           </li>
           <li>
-            <a href="#">2</a>
+            <a class="catalog-pagination__link" href="#">2</a>
           </li>
           <li>
-            <a href="#">3</a>
+            <a class="catalog-pagination__link" href="#">3</a>
           </li>
           <li>
-            <a href="#">4</a>
+            <a class="catalog-pagination__link" href="#">4</a>
           </li>
           <li>
-            <a>вперед</a>
+            <a class="catalog-pagination__link catalog-pagination__arrow catalog-pagination__arrow--next">вперед</a>
           </li>
         </ul>
       </div>
@@ -256,14 +260,14 @@
         </li>
       </ul>
       <ul class="footer__useful-links useful-links">
-        <li><a href="" class="useful-links__link useful-links__link--heart">Для поставщиков</a></li>
-        <li><a href="" class="useful-links__link">О производстве</a></li>
-        <li><a href="" class="useful-links__link">Наши документы</a></li>
-        <li><a href="" class="useful-links__link">Экологические стандарты</a></li>
+        <li><a href="" class="useful-links__link useful-links__link--heart text-link">Для поставщиков</a></li>
+        <li><a href="" class="useful-links__link text-link">О производстве</a></li>
+        <li><a href="" class="useful-links__link text-link">Наши документы</a></li>
+        <li><a href="" class="useful-links__link text-link">Экологические стандарты</a></li>
       </ul>
       <div class="footer__academy academy-links">
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-links__logo">htmlacademy</a>
-        <p class="academy-links__copy-text">Сделано в <a class="academy-links__copy-link"
+        <p class="academy-links__copy-text">Сделано в <a class="academy-links__copy-link text-link"
             href="https://htmlacademy.ru/study">HTML Academy</a> ©
           2019</p>
       </div>
