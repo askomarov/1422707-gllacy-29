@@ -608,7 +608,7 @@ img {
 }
 
 .banners-item--rasberry {
-  background: var(--basic-black) url("../img/rasberry-bg.jpg") center no-repeat;
+  background: var(--basic-black) url("img/rasberry-bg.jpg") center no-repeat;
   background-size: cover;
 }
 
