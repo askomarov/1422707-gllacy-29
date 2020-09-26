@@ -173,8 +173,8 @@
             Пусто</a>
           <form action="" method="POST" class="header__submenu cart">
             <!-- чтобы форма не отправлялась Пустой, можно добавить два инпута с типом hidden -->
-            <input type="hidden" name="">
-            <input type="hidden" name="">
+            <input type="hidden" name="cart-item-1" value="ice-cream orange">
+            <input type="hidden" name="cart-item-2" value="ice-cream strawberry">
             <!-- не знаю что с ними делать, никогда неверстал корзины -->
             <ul class="cart__list">
               <li class="cart__item cart-item">
@@ -245,9 +245,9 @@
           </li> -->
         </ul>
         <ul class="slider__dots">
-          <li><a href="" class="slider__dot slider__dot--current">1</a></li>
-          <li><a href="" class="slider__dot">2</a></li>
-          <li><a href="" class="slider__dot">3</a></li>
+          <li><button type="button" class="slider__dot slider__dot--current">1</button></li>
+          <li><button type="button" class="slider__dot">2</button></li>
+          <li><button type="button" class="slider__dot">3</button></li>
         </ul>
       </div>
     </section>
@@ -344,23 +344,22 @@
     <section class="news">
       <!-- Валидатору не нравится что здесь не h1 .. -->
       <h2 class="visually-hidden">Новости магазина Глэйси, блог и рассылка</h2>
-      <div class="news__container container">
-        <ul class="news__banners">
-          <li class="news__banners-item blog-banner">
-            <p class="blog-banner__text">Новое в нашем блоге</p>
-            <a href="" class="blog-banner__blog-link">10 способов сервировки фруктовых щербетов к столу</a>
-          </li>
-          <li class="news__banners-item subscribe-banner">
-            <form class="subscribe-banner__form" action="" method="POST">
-              <p class="subscribe-banner__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
-                самого
-                вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-              <input class="subscribe-banner__input main-input" type="email" name="email" id="email">
-              <button class="subscribe-banner__btn main-btn" type="submit">Отправить</button>
-            </form>
-          </li>
-        </ul>
-      </div>
+      <ul class="news__banners container">
+        <li class="news__banners-item blog-banner">
+          <p class="blog-banner__text">Новое в нашем блоге</p>
+          <a href="" class="blog-banner__blog-link">10 способов сервировки фруктовых щербетов к столу</a>
+        </li>
+        <li class="news__banners-item subscribe-banner">
+          <form class="subscribe-banner__form" action="" method="POST">
+            <p class="subscribe-banner__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
+              самого
+              вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <input class="subscribe-banner__input main-input" type="email" name="email" id="email"
+              placeholder="email@example.com" required>
+            <button class="subscribe-banner__btn main-btn" type="submit">Отправить</button>
+          </form>
+        </li>
+      </ul>
     </section>
 
     <section class="contacts">
