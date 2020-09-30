@@ -166,7 +166,8 @@
                 d="M7.03359 20C8.14664 20 9.04894 19.1046 9.04894 18C9.04894 16.8954 8.14664 16 7.03359 16C5.92054 16 5.01823 16.8954 5.01823 18C5.01823 19.1046 5.92054 20 7.03359 20Z" />
               <path
                 d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" />
-              <path class="svg-full-cart" d="M5.93506 4.02997L6.97297 13H17.5032L18.6923 4.02997H5.93506Z" fill="#E84D37" />
+              <path class="svg-full-cart" d="M5.93506 4.02997L6.97297 13H17.5032L18.6923 4.02997H5.93506Z"
+                fill="#E84D37" />
             </svg>
             2 товара</a>
           <form action="" method="POST" class="header__submenu cart">
@@ -230,6 +231,70 @@
         <h2 class="catalog__title">Сливочное мороженое</h2>
         <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__filter filter">
           <!-- здесь будет фильтр -->
+          <div class="filter__item">
+            <h3 class="filter__heading">
+              Сортировка:
+            </h3>
+            <div class="select">
+              <div class="select__header">
+                <span class="select__option select__current">по популярности</span>
+                <div class="select__icon"></div>
+              </div>
+              <div class="select__body">
+                <div class="select__option select__item">по популярности</div>
+                <div class="select__option select__item">по цене</div>
+                <div class="select__option select__item">по наименованию</div>
+              </div>
+            </div>
+          </div>
+          <div class="filter__item">
+            <h3 class="filter__heading">
+              Цена:
+            </h3>
+            <div class="fliter__price catalog-filter-range__price-controls">
+              <label class="label-price label-price--min">от <input class="input-price input-price--min"
+                  id="input-number-2" type="number" min="0" max="499" name="min-price" value="0"></label>
+              <label class="label-price label-price--max">до <input class="input-price input-price--max"
+                  id="input-number" type="number" max="900" name="max-price" value="500"></label>
+            </div>
+            <div id="slider"></div>
+          </div>
+          <div class="filter__item">
+            <h3 class="filter__heading">Жирность:</h3>
+            <div class="filter__radio filter-radio">
+              <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="without-fat"
+                id="without-fat" checked>
+              <label class="catalog-filter-radio__label" for="without-fat">0%</label>
+              <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="fat-up-to-10"
+                id="fat-up-to-10">
+              <label class="catalog-filter-radio__label" for="fat-up-to-10">до 10%</label>
+              <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="fat-up-to-30"
+                id="fat-up-to-30">
+              <label class="catalog-filter-radio__label" for="fat-up-to-30">до 30%</label>
+              <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="fat-over-30"
+                id="fat-over-30">
+              <label class="catalog-filter-radio__label" for="fat-over-30">выше 30%</label>
+            </div>
+          </div>
+          <div class="filter__item">
+            <h3 class="filter__heading">Наполнители:</h3>
+            <div class="filter__checkbox filter-checkbox">
+              <input class="filter-checkbox__input" type="checkbox" id="chocalate" name="chocalate"
+                value="topfil-chocalate" checked>
+              <label class="filter-checkbox__label" for="chocalate">шоколадные</label>
+              <input class="filter-checkbox__input" type="checkbox" id="sugar" name="sugar" value="topfil-sugar"
+                checked>
+              <label class="filter-checkbox__label" for="sugar">сахарные присыпки</label>
+              <input class="filter-checkbox__input" type="checkbox" id="fruits" name="fruits" value="topfil-fruits">
+              <label class="filter-checkbox__label" for="fruits">фрукты</label>
+              <input class="filter-checkbox__input" type="checkbox" id="syrop" name="syrop" value="topfil-syrop">
+              <label class="filter-checkbox__label" for="syrop">сиропы</label>
+              <input class="filter-checkbox__input" type="checkbox" id="jam" name="jam" value="topfil-jam">
+              <label class="filter-checkbox__label" for="jam">джемы</label>
+            </div>
+
+          </div>
+          <button class="catalog-form__btn main-btn" type="submit">Применить</button>
         </form>
         <ul class="catalog__list">
           <li class="catalog__list-item ice-item">
@@ -455,6 +520,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
