@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/nouislider.css">
   <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Глейси - каталог</title>
 </head>
@@ -123,8 +124,11 @@
             </li>
           </ul>
         </li>
-        <li class="header__menu-list"><a class="header__link" href="blank.html">Доставка и оплата</a></li>
-        <li class="header__menu-list"><a class="header__link" href="price.html">О компании</a></li>
+        <li class="header__menu-list header__menu-list--nopsevdo"><a class="header__link" href="blank.html">Доставка и
+            оплата</a></li>
+        <li class="header__menu-list header__menu-list--nopsevdo"><a class="header__link" href="price.html">О
+            компании</a>
+        </li>
       </ul>
       <ul class="header__actions header-actions">
         <li class="header-actions__list">
@@ -247,15 +251,15 @@
               </div>
             </div>
           </div>
-          <div class="filter__item">
-            <h3 class="filter__heading">
-              Цена:
-            </h3>
-            <div class="fliter__price catalog-filter-range__price-controls">
-              <label class="label-price label-price--min">от <input class="input-price input-price--min"
-                  id="input-number-2" type="number" min="0" max="499" name="min-price" value="0"></label>
-              <label class="label-price label-price--max">до <input class="input-price input-price--max"
-                  id="input-number" type="number" max="900" name="max-price" value="500"></label>
+          <div class="filter__item item-price">
+            <h3 class="filter__heading">Цена:</h3>
+            <div class="item-price__price-box">
+              <label class="item-price__label item-price__label--min"><input
+                  class="item-price__input item-price__input--min" id="input-number" type="number" min="0" max="499"
+                  name="min-price" value="0"></label>
+              <label class="item-price__label item-price__label--max"><input
+                  class="item-price__input item-price__input--max" id="input-number-2" type="number" max="900"
+                  name="max-price" value="500"></label>
             </div>
             <div id="slider"></div>
           </div>
@@ -263,38 +267,38 @@
             <h3 class="filter__heading">Жирность:</h3>
             <div class="filter__radio filter-radio">
               <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="without-fat"
-                id="without-fat" checked>
+                id="without-fat">
               <label class="catalog-filter-radio__label" for="without-fat">0%</label>
               <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="fat-up-to-10"
                 id="fat-up-to-10">
               <label class="catalog-filter-radio__label" for="fat-up-to-10">до 10%</label>
               <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="fat-up-to-30"
-                id="fat-up-to-30">
+                id="fat-up-to-30" checked>
               <label class="catalog-filter-radio__label" for="fat-up-to-30">до 30%</label>
               <input class="catalog-filter-radio__input" type="radio" name="fat-content" value="fat-over-30"
                 id="fat-over-30">
               <label class="catalog-filter-radio__label" for="fat-over-30">выше 30%</label>
             </div>
           </div>
-          <div class="filter__item">
+          <div class="filter__item filter__item--checkbox">
             <h3 class="filter__heading">Наполнители:</h3>
             <div class="filter__checkbox filter-checkbox">
-              <input class="filter-checkbox__input" type="checkbox" id="chocalate" name="chocalate"
+              <input class="filter-checkbox__input" type="checkbox" id="chocalate" name="topfil"
                 value="topfil-chocalate" checked>
               <label class="filter-checkbox__label" for="chocalate">шоколадные</label>
-              <input class="filter-checkbox__input" type="checkbox" id="sugar" name="sugar" value="topfil-sugar"
+              <input class="filter-checkbox__input" type="checkbox" id="sugar" name="topfil" value="topfil-sugar"
                 checked>
               <label class="filter-checkbox__label" for="sugar">сахарные присыпки</label>
-              <input class="filter-checkbox__input" type="checkbox" id="fruits" name="fruits" value="topfil-fruits">
+              <input class="filter-checkbox__input" type="checkbox" id="fruits" name="topfil" value="topfil-fruits">
               <label class="filter-checkbox__label" for="fruits">фрукты</label>
-              <input class="filter-checkbox__input" type="checkbox" id="syrop" name="syrop" value="topfil-syrop">
+              <input class="filter-checkbox__input" type="checkbox" id="syrop" name="topfil" value="topfil-syrop">
               <label class="filter-checkbox__label" for="syrop">сиропы</label>
-              <input class="filter-checkbox__input" type="checkbox" id="jam" name="jam" value="topfil-jam">
+              <input class="filter-checkbox__input" type="checkbox" id="jam" name="topfil" value="topfil-jam">
               <label class="filter-checkbox__label" for="jam">джемы</label>
             </div>
 
           </div>
-          <button class="catalog-form__btn main-btn" type="submit">Применить</button>
+          <button class="filter__btn" type="submit">Применить</button>
         </form>
         <ul class="catalog__list">
           <li class="catalog__list-item ice-item">
@@ -520,6 +524,8 @@
       </div>
     </div>
   </footer>
+  <script src="js/nouislider.js"></script>
+  <script src="js/slider-range.js"></script>
   <script src="js/script.js"></script>
 </body>
 
