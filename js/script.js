@@ -22,5 +22,15 @@ let mySelect = function () {
     currentText.innerText = text;
     select.classList.remove('is-active');
   }
+
+  document.addEventListener("click", function (e) {
+    let select = document.querySelector('.select');
+    if (!e.target.closest('.select')) {
+      select.classList.remove('is-active');
+    }
+  });
+
 };
 mySelect();
+
+
