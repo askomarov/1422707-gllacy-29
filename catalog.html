@@ -138,7 +138,7 @@
             </svg>
           </a>
           <label class="header__submenu search-form" for="search">
-            <input class="header-actions__input--search main-input" type="search" name="search" id="search"
+            <input class="search-form__input main-input" type="search" name="search" id="search"
               placeholder="Крем-брюле">
           </label>
         </li>
@@ -148,15 +148,15 @@
               <use xlink:href="#login-logo"></use>
             </svg> Вход</a>
           <form class="header__submenu login-form" action="" method="post">
-            <input class="login-form__input--email main-input" type="email" name="login-mail" id="login-mail"
-              placeholder="email@example.com" required>
-            <input class="login-form__input--pass main-input" type="password" name="login-pass" id="login-pass"
-              required>
+            <input class="login-form__input login-form__input--email main-input" type="email" name="login-mail"
+              id="login-mail" placeholder="email@example.com" required>
+            <input class="login-form__input login-form__input--pass main-input" type="password" name="login-pass"
+              id="login-pass" required>
             <div class="login-form__footer">
               <button class="login-form__btn main-btn" type="submit">Войти</button>
               <div class="login-form__help">
-                <a href="#" class="login-form__forgot-password text-link--black">Забыли пароль?</a>
-                <a href="#" class="login-form__registration text-link--black">Новая регистрация</a>
+                <a href="#" class="login-form__forgot-password text-link text-link--black">Забыли пароль?</a>
+                <a href="#" class="login-form__registration text-link text-link--black">Новая регистрация</a>
               </div>
             </div>
           </form>

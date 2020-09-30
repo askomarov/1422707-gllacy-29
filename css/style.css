@@ -641,7 +641,7 @@ img {
   z-index: 3;
 }
 
-.slider__dots {
+.promo__slider-dots {
   position: absolute;
   bottom: 0;
   list-style: none;
@@ -650,15 +650,15 @@ img {
   display: flex;
 }
 
-.slider__dots li {
+.promo__slider-dots li {
   margin-right: 8px;
 }
 
-.slider__dots li:last-child {
+.promo__slider-dots li:last-child {
   margin-right: 0;
 }
 
-.slider__dot {
+.promo__slider-dot {
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -672,12 +672,12 @@ img {
   height: 21px;
 }
 
-.slider__dot:focus {
+.promo__slider-dot:focus {
   outline: none;
   border: 2px solid var(--input-focus-border);
 }
 
-.slider__dot--current {
+.promo__slider-dot--current {
   background-color: var(--basic-white);
 }
 
@@ -1368,7 +1368,7 @@ img {
   display: inline-block;
   width: 6px;
   height: 6px;
-  background: url("../img/breadCrumbsArrow.svg") center no-repeat;
+  background: url("../img/bread-сrumbs-arrow.svg") center no-repeat;
 }
 
 .catalog__breadcrumbs-link {
