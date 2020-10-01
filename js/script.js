@@ -22,8 +22,8 @@ let mySelect = function () {
     currentText.innerText = text;
     select.classList.remove("is-active");
   }
-
-  document.addEventListener("click", function (e) {
+  let catalog = document.querySelector(".catalog")
+  catalog.addEventListener("click", function (e) {
     let select = document.querySelector(".select");
     if (!e.target.closest(".select")) {
       select.classList.remove("is-active");
@@ -32,5 +32,20 @@ let mySelect = function () {
 
 };
 mySelect();
+
+
+let promoSlider = function () {
+  let buttons = document.querySelectorAll(".promo__slider-dot");
+  mainPage = document.body;
+
+  for (let i = 0; i <= buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      mainPage.style.backgroundColor = "var(--special-slide-" + [i] + ")";
+      console.log("нажал кнопку " + [i]);
+    });
+  }
+};
+
+promoSlider();
 
 
