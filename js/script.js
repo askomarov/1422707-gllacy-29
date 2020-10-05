@@ -34,6 +34,7 @@ if (selectHeader != null) {
 let promoSlider = function () {
   let buttons = document.querySelectorAll(".promo__slider-dot");
   let slides = document.querySelectorAll(".slider-item");
+  let mainPage = document.body;
   for (let i = 0; i <= buttons.length - 1; i++) {
     buttons[i].onclick = function () {
       mainPage.style.backgroundColor = "var(--special-slide-" + [i] + ")";
