@@ -639,12 +639,12 @@ img {
   position: relative;
   padding: 0;
   z-index: 3;
-  margin: 315px 0 27px 13px;
+  margin: 315px 0 28px 13px;
 }
 
 .slider-item__btn {
   width: 261px;
-  height: 63px;
+  height: 62px;
   border-radius: 70px;
   font-weight: bold;
   font-size: 32px;
@@ -804,7 +804,7 @@ img {
   font-family: "Roboto", Arial, sans-serif;
   position: relative;
   z-index: 2;
-  min-height: 430px;
+  min-height: 429px;
   width: 100%;
 }
 
@@ -1079,16 +1079,16 @@ img {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 26px;
-  row-gap: 10px;
+  column-gap: 29px;
+  row-gap: 12px;
 }
 
 .feautures-list__text {
-  padding-top: 11px;
+  padding-top: 10px;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  padding-left: 55px;
+  padding-left: 56px;
   position: relative;
 }
 
@@ -1420,23 +1420,22 @@ img {
 
 .footer {
   font-family: "Roboto", Arial, sans-serif;
-  padding-top: 18px;
+  padding-top: 19px;
   padding-bottom: 26px;
 }
 
 .footer__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-  gap: 26px;
 }
 
 .footer__social {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  flex: 0 1 25%;
   margin: 0;
   padding: 0;
-  flex-wrap: wrap;
 }
 
 .footer__social-item {
@@ -1470,16 +1469,13 @@ img {
 }
 
 .useful-links {
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 0;
-  display: flex;
+  width: 327px;
   list-style: none;
-  flex-wrap: wrap;
-  flex: 0 1 342px;
-}
-
-.useful-links__list {
-  flex: 0 1 50%;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .useful-links__link {
@@ -1487,6 +1483,7 @@ img {
   font-size: 13px;
   line-height: 18px;
   position: relative;
+  width: min-content;
 }
 
 .useful-links__link--heart {
@@ -1503,22 +1500,17 @@ img {
   background: url("../img/heart.svg") center no-repeat;
 }
 
-.footer__academy {
-  flex: 0 1 25%;
-  margin-left: auto;
-}
-
 .academy-links {
-  padding: 0 0 0 51px;
+  justify-self: end;
 }
 
 .academy-links__logo {
   display: inline-block;
-  margin: 0 0 8px;
 }
 
 .academy-links__copy-text {
   margin: 0;
+  font-size: 12px;
 }
 
 /*! nouislider - 14.6.2 - 9/16/2020 */
