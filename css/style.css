@@ -219,7 +219,7 @@ img {
 }
 
 .header__logo {
-  margin-right: 24px;
+  margin-right: 9px;
   padding-top: 6px;
 }
 
@@ -227,11 +227,10 @@ img {
   display: flex;
   flex: 1 1 auto;
   margin: 0;
-  padding: 10px 0 0;
+  padding: 0;
 }
 
 .header__menu-list {
-  margin-right: 32px;
   position: relative;
 }
 
@@ -257,7 +256,8 @@ img {
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
-  height: 32px;
+  height: 31px;
+  padding: 6px 16px;
   fill: var(--basic-white);
   color: var(--basic-white);
   display: block;
@@ -836,7 +836,7 @@ img {
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  margin: 0 0 21px;
+  margin: -2px 0 23px 0px;
 }
 
 .contacts__tel-link {
