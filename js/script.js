@@ -1,19 +1,12 @@
+
 let mySelect = function () {
-  let selectHeader = document.querySelectorAll(".select__header");
+  selectHeader.addEventListener("click", function () {
+    selectHeader.classList.toggle("is-active");
+  })
   let selectItem = document.querySelectorAll(".select__item");
-
-  selectHeader.forEach(item => {
-    item.addEventListener("click", selectToggle)
-  });
-
   selectItem.forEach(item => {
     item.addEventListener("click", selectChoose)
   });
-
-  function selectToggle() {
-    this.parentElement.classList.toggle("is-active");
-  }
-
   function selectChoose() {
     let text = this.innerText;
     let select = this.closest(".select");
@@ -29,16 +22,20 @@ let mySelect = function () {
     }
   });
 };
+let selectHeader = document.querySelector(".select__header");
+if (selectHeader != null) {
+  console.log("select нашел элменет")
+  mySelect();
+} else {
+  console.log("select элменет не нашел")
+}
 
 
 let promoSlider = function () {
   let buttons = document.querySelectorAll(".promo__slider-dot");
-  mainPage = document.body;
-
   let slides = document.querySelectorAll(".slider-item");
-
-  for (let i = 0; i <= buttons.length; i++) {
-    buttons[i].addEventListener("click", function () {
+  for (let i = 0; i <= buttons.length - 1; i++) {
+    buttons[i].onclick = function () {
       mainPage.style.backgroundColor = "var(--special-slide-" + [i] + ")";
       if (i === 0) {
         buttons[0].classList.add('promo__slider-dot--current');
@@ -62,10 +59,17 @@ let promoSlider = function () {
         slides[0].classList.remove('slider-item--active');
         slides[1].classList.remove('slider-item--active');
       }
-    });
+    };
   }
 };
-promoSlider();
+let slider = document.querySelector(".slider");
+if (slider != null) {
+  console.log("slider нашел элменет")
+  promoSlider();
+} else {
+  console.log("slider элменет не нашел")
+}
 
-mySelect();
+
+
 
