@@ -878,7 +878,7 @@ img {
 
 .contacts-popup {
   font-family: "Roboto", Arial, sans-serif;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -895,7 +895,7 @@ img {
   transition: all 0.7s ease 0s;
 }
 
-.contacts-popup.open-popup {
+.contacts-popup--open {
   opacity: 1;
   visibility: visible;
   z-index: 20;
