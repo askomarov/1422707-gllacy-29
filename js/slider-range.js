@@ -5,7 +5,7 @@ noUiSlider.create(html5Slider, {
   connect: true,
   range: {
     "min": 0,
-    "max": 900
+    "max": 730
   }
 });
 

@@ -47,6 +47,7 @@
   --slider-line: rgba(248, 247, 244, 0.5);
   --slider-conect-line: rgba(248, 247, 244, 1);
   --slider-toggle-dot: rgba(171, 171, 171, 1);
+  --slider-item-blur: rgba(218, 228, 239, 0.75);
 }
 
 /* шрифты */
@@ -478,6 +479,8 @@ img {
   font-size: 14px;
   line-height: 16px;
   margin: 0 0 8px;
+  position: relative;
+  z-index: 10;
 }
 
 .header__contact-tel {
@@ -486,6 +489,8 @@ img {
   font-weight: bold;
   font-size: 22px;
   line-height: 24px;
+  position: relative;
+  z-index: 10;
 }
 
 .cart {
@@ -614,6 +619,18 @@ img {
   width: 100%;
   height: 100%;
   position: absolute;
+  border-radius: 50%;
+}
+
+.slider-item__images:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+  background: var(--slider-item-blur);
+  filter: blur(250px);
 }
 
 .slider-item__img-left {
@@ -810,7 +827,7 @@ img {
 
 .contacts__container {
   padding-top: 61px;
-  padding-bottom: 61px;
+  padding-bottom: 62px;
 }
 
 .contacts__text-block {
@@ -997,7 +1014,7 @@ img {
 }
 
 .catalog-pagination__list {
-  margin-right: 6px;
+  margin-right: 5px;
 }
 
 .catalog-pagination__list:last-child {
@@ -1340,6 +1357,8 @@ img {
 
 .catalog {
   font-family: "Roboto", Arial, sans-serif;
+  position: relative;
+  margin-top: -27px;
 }
 
 .catalog__container {
@@ -1403,25 +1422,24 @@ img {
 }
 
 .catalog__list {
-  margin: 0 -13px 80px -13px;
+  margin: 0 0 77px 0;
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 40px;
+  row-gap: 37px;
 }
 
 .catalog__pagination {
-  margin: 0;
+  margin: 0 9px 0 auto;
   padding: 0;
   width: 194px;
-  margin-left: auto;
 }
 
 .footer {
   font-family: "Roboto", Arial, sans-serif;
-  padding-top: 19px;
-  padding-bottom: 26px;
+  padding-top: 18px;
+  padding-bottom: 20px;
 }
 
 .footer__container {
@@ -1434,17 +1452,17 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin: 5px 0 0;
   padding: 0;
 }
 
 .footer__social-item {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .footer__social-link {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   border: 2px solid var(--social-gray);
   display: flex;
@@ -1469,13 +1487,16 @@ img {
 }
 
 .useful-links {
-  margin: 0;
+  margin: 7px 0 0;
   padding: 0;
   width: 327px;
   list-style: none;
   justify-self: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content max-content;
+  column-gap: 29px;
+  row-gap: 5px;
+  justify-content: center;
 }
 
 .useful-links__link {
@@ -1506,6 +1527,7 @@ img {
 
 .academy-links__logo {
   display: inline-block;
+  margin-left: -1px;
 }
 
 .academy-links__copy-text {
@@ -1875,9 +1897,9 @@ img {
 .filter__heading {
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 11px;
   color: var(--basic-white);
-  margin: 0 0 7px 16px;
+  margin: 0 0 10px 16px;
 }
 
 .filter__btn {
@@ -1909,6 +1931,10 @@ img {
   box-shadow: var(--header-link-active-shadow);
   outline: none;
   border: none;
+}
+
+.filter__item--checkbox .filter__heading {
+  margin-bottom: 12px;
 }
 
 .select {
@@ -2049,7 +2075,7 @@ img {
 }
 
 .filter-radio__label {
-  padding-left: 33px;
+  padding-left: 34px;
   position: relative;
   cursor: pointer;
   margin-right: 18px;
@@ -2103,6 +2129,7 @@ img {
   align-items: center;
   flex-wrap: wrap;
   min-height: 36px;
+  width: 711px;
   padding: 0px 17px 0px 14px;
 }
 
@@ -2136,7 +2163,7 @@ img {
 }
 
 .filter-checkbox__label {
-  padding-left: 35px;
+  padding-left: 36px;
   position: relative;
   cursor: pointer;
   margin-right: 19px;
@@ -2182,6 +2209,10 @@ img {
   margin-bottom: 0;
 }
 
+.item-price__price-box {
+  height: 15px;
+}
+
 .item-price__label {
   position: relative;
   display: inline-block;
@@ -2204,7 +2235,7 @@ img {
 }
 
 .item-price__label--min {
-  margin-right: 16px;
+  margin-right: 8px;
 }
 
 .item-price__input {
@@ -2220,7 +2251,7 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: var(--basic-white);
-  width: 45px;
+  width: 41px;
   padding-right: 12px;
 }
 
@@ -2250,8 +2281,8 @@ img {
 
 .noUi-base {
   height: 2px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 48%;
+  transform: translateY(-48%);
 }
 
 .noUi-connects {
@@ -2269,7 +2300,7 @@ img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  right: -8px;
+  right: -9px;
   top: -9px;
   box-shadow: var(--slider-dot-shadow);
 }
