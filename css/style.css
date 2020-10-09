@@ -170,8 +170,7 @@ img {
 }
 
 .main-btn:focus {
-  outline: none;
-  border: 2px solid var(--input-focus-border);
+  outline: 2px solid var(--input-focus-border);
 }
 
 .text-link {
@@ -198,7 +197,16 @@ img {
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* header */
@@ -466,7 +474,7 @@ img {
 }
 
 .header-actions__link--cart-full .svg-full-cart {
-  display: inline-block;
+  display: block;
 }
 
 .header__contact {
@@ -590,7 +598,6 @@ img {
 }
 
 .slider {
-  display: inline-block;
   padding: 0;
   margin: 0 auto;
   width: 716px;
@@ -650,6 +657,7 @@ img {
 .slider-item__title {
   text-align: center;
   display: inline-block;
+  vertical-align: middle;
   font-weight: bold;
   font-size: 60px;
   line-height: 60px;

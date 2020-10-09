@@ -24,10 +24,8 @@ let mySelect = function () {
 };
 let selectHeader = document.querySelector(".select__header");
 if (selectHeader != null) {
-  console.log("select нашел элменет")
   mySelect();
 } else {
-  console.log("select элменет не нашел")
 };
 
 
@@ -65,16 +63,15 @@ let promoSlider = function () {
 };
 let slider = document.querySelector(".slider");
 if (slider != null) {
-  console.log("slider нашел элменет")
   promoSlider();
 } else {
-  console.log("slider элменет не нашел")
 };
 
 let contactsPopup = document.querySelector(".contacts-popup ")
 if (contactsPopup != null) {
   let popupBtn = document.querySelector(".contacts__btn");
-  popupBtn.addEventListener("click", function () {
+  popupBtn.addEventListener("click", function (e) {
+    e.preventDefault();
     contactsPopup.classList.add("contacts-popup--open");
   });
   let contactsPopupClose = document.querySelector(".contacts-popup__close");
