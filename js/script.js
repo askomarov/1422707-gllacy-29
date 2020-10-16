@@ -67,16 +67,29 @@ if (slider != null) {
 } else {
 };
 
-let contactsPopup = document.querySelector(".contacts-popup ")
+let contactsPopup = document.querySelector(".contacts-popup ");
+
+
 if (contactsPopup != null) {
   let popupBtn = document.querySelector(".contacts__btn");
-  popupBtn.addEventListener("click", function (e) {
-    e.preventDefault();
+  popupBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
     contactsPopup.classList.add("contacts-popup--open");
   });
   let contactsPopupClose = document.querySelector(".contacts-popup__close");
-  contactsPopupClose.addEventListener("click", function () {
+  contactsPopupClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
     contactsPopup.classList.remove("contacts-popup--open");
   });
-};
+  let contactsForm = contactsPopup.querySelector('.contacts-popup__form');
+  let loginName = contactsPopup.querySelector('#contact-name');
+  let loginEmail = contactsPopup.querySelector('#contact-email');
+  contactsForm.addEventListener("submit", function (evt) {
+    if (!loginName.value || !loginEmail.value) {
+      evt.preventDefault();
+    } else {
+      localStorage.setItem("login", loginName.value);
+    }
+  });
 
+};

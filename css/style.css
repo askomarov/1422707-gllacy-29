@@ -253,7 +253,7 @@ img {
 
 .header__menu-list::before {
   content: "";
-  bottom: -5px;
+  bottom: -8px;
   position: absolute;
   left: 0;
   right: 0;
@@ -329,7 +329,15 @@ img {
   z-index: 10;
 }
 
-.header-actions > .header-actions__list:hover .header__submenu {
+.header__menu > .header__menu-list:focus .header__submenu,
+.header__menu > .header__menu-list:focus-within .header__submenu {
+  display: block;
+  z-index: 10;
+}
+
+.header-actions > .header-actions__list:hover .header__submenu,
+.header-actions > .header-actions__list:focus .header__submenu,
+.header-actions > .header-actions__list:focus-within .header__submenu {
   display: block;
   z-index: 10;
 }
@@ -412,7 +420,7 @@ img {
 
 .header-actions__list::before {
   content: "";
-  bottom: -5px;
+  bottom: -8px;
   position: absolute;
   left: 0;
   right: 0;
@@ -899,6 +907,16 @@ img {
   top: 0;
   left: 0;
   object-fit: cover;
+  z-index: -1;
+}
+
+.contacts__map-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: 0;
 }
 
 .contacts-popup {
@@ -1201,16 +1219,27 @@ img {
   width: 293px;
 }
 
+.ice-item__description-link:focus + .ice-item__hover-wrapper,
+.ice-item__description-link:focus-within + .ice-item__hover-wrapper,
 .ice-item:hover .ice-item__hover-wrapper {
   display: flex;
   opacity: 1;
   visibility: visible;
 }
 
+.ice-item__description-link:focus + .ice-item__hover-wrapper > .ice-item__btn-view,
+.ice-item__description-link:focus-within + .ice-item__hover-wrapper > .ice-item__btn-view,
 .ice-item:hover .ice-item__btn-view {
   opacity: 1;
   visibility: visible;
   transform: scale3d(1, 1, 1);
+}
+
+.ice-item__btn-view:focus + .ice-item__hover-wrapper,
+.ice-item__btn-view:focus-within + .ice-item__hover-wrapper {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 .ice-item:hover.ice-item--hit::after {
@@ -1280,8 +1309,7 @@ img {
   position: absolute;
   top: 0;
   bottom: -76px;
-  left: 0;
-  right: 0;
+  left: -13px;
   width: 100%;
   background: var(--light-gray);
   border-radius: 4px;
@@ -1947,6 +1975,8 @@ img {
 
 .select {
   position: relative;
+  display: inline-block;
+  text-decoration: none;
   width: 196px;
   height: 36px;
   background: var(--light-gray);
@@ -1973,6 +2003,11 @@ img {
   display: block;
 }
 
+.select:focus > .select__body,
+.select:focus-within > .select__body {
+  display: block;
+}
+
 .select__header {
   cursor: pointer;
   width: 100%;
@@ -1985,6 +2020,8 @@ img {
 }
 
 .select__option {
+  display: block;
+  text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -2327,10 +2364,6 @@ img {
   width: 4px;
   height: 4px;
   background: var(--slider-toggle-dot);
-}
-
-.noUi-horizontal .noUi-handle:focus {
-  outline: none;
 }
 
 .range-slider {
