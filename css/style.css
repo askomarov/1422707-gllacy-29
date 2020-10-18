@@ -209,6 +209,42 @@ img {
   overflow: hidden;
 }
 
+/* Animations */
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 /* header */
 .header {
   font-family: "Roboto", Arial, sans-serif;
@@ -746,10 +782,12 @@ img {
 }
 
 .banners-item {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   border-radius: 16px;
   overflow: hidden;
   width: 560px;
-  height: 229px;
+  min-height: 229px;
   color: var(--basic-white);
   padding: 14px 22px 22px 16px;
 }
@@ -806,7 +844,7 @@ img {
   border-radius: 16px;
   overflow: hidden;
   width: 560px;
-  height: 220px;
+  min-height: 220px;
   padding: 18px 22px 19px 20px;
   background: var(--basic-white);
   color: var(--basic-black);
@@ -851,7 +889,7 @@ img {
 
 .contacts__container {
   padding-top: 61px;
-  padding-bottom: 62px;
+  padding-bottom: 61px;
 }
 
 .contacts__text-block {
@@ -950,6 +988,7 @@ img {
   opacity: 1;
   visibility: visible;
   z-index: 20;
+  animation: bounce 0.6s;
 }
 
 .contacts-popup__body {
@@ -959,6 +998,10 @@ img {
   height: 441px;
   background: var(--form-background);
   border-radius: 6px;
+}
+
+.contacts-popup__body--error {
+  animation: shake 0.6s;
 }
 
 .contacts-popup__close {
@@ -1180,7 +1223,7 @@ img {
 }
 
 .subscribe-banner__form {
-  padding: 24px 10px 22px 22px;
+  padding: 24px 10px 35px 22px;
   border-radius: 12px;
   width: 100%;
   height: 100%;
@@ -1299,7 +1342,7 @@ img {
   vertical-align: middle;
   font-size: 30px;
   line-height: 35px;
-  margin: 0 0 33px 6px;
+  margin: 0 0 0 6px;
 }
 
 .ice-item__description-link {
@@ -2321,7 +2364,7 @@ img {
   display: inline-block;
 }
 
-#slider {
+.item-price__slider {
   padding: 0 22px;
   width: 218px;
   height: 36px;
