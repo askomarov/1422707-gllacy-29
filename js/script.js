@@ -37,26 +37,26 @@ let promoSlider = function () {
     buttons[i].onclick = function () {
       mainPage.style.backgroundColor = "var(--special-slide-" + [i] + ")";
       if (i === 0) {
-        buttons[0].classList.add('promo__slider-dot--current');
-        buttons[1].classList.remove('promo__slider-dot--current');
-        buttons[2].classList.remove('promo__slider-dot--current');
-        slides[0].classList.add('slider-item--active');
-        slides[1].classList.remove('slider-item--active');
-        slides[2].classList.remove('slider-item--active');
+        buttons[0].classList.add("promo__slider-dot--current");
+        buttons[1].classList.remove("promo__slider-dot--current");
+        buttons[2].classList.remove("promo__slider-dot--current");
+        slides[0].classList.add("slider-item--active");
+        slides[1].classList.remove("slider-item--active");
+        slides[2].classList.remove("slider-item--active");
       } else if (i === 1) {
-        buttons[1].classList.add('promo__slider-dot--current');
-        buttons[0].classList.remove('promo__slider-dot--current');
-        buttons[2].classList.remove('promo__slider-dot--current');
-        slides[1].classList.add('slider-item--active');
-        slides[0].classList.remove('slider-item--active');
-        slides[2].classList.remove('slider-item--active');
+        buttons[1].classList.add("promo__slider-dot--current");
+        buttons[0].classList.remove("promo__slider-dot--current");
+        buttons[2].classList.remove("promo__slider-dot--current");
+        slides[1].classList.add("slider-item--active");
+        slides[0].classList.remove("slider-item--active");
+        slides[2].classList.remove("slider-item--active");
       } else if (i === 2) {
-        buttons[2].classList.add('promo__slider-dot--current');
-        buttons[0].classList.remove('promo__slider-dot--current');
-        buttons[1].classList.remove('promo__slider-dot--current');
-        slides[2].classList.add('slider-item--active');
-        slides[0].classList.remove('slider-item--active');
-        slides[1].classList.remove('slider-item--active');
+        buttons[2].classList.add("promo__slider-dot--current");
+        buttons[0].classList.remove("promo__slider-dot--current");
+        buttons[1].classList.remove("promo__slider-dot--current");
+        slides[2].classList.add("slider-item--active");
+        slides[0].classList.remove("slider-item--active");
+        slides[1].classList.remove("slider-item--active");
       }
     };
   }
@@ -81,9 +81,9 @@ if (contactsPopup != null) {
     evt.preventDefault();
     contactsPopup.classList.remove("contacts-popup--open");
   });
-  let contactsForm = contactsPopup.querySelector('.contacts-popup__form');
-  let loginName = contactsPopup.querySelector('#contact-name');
-  let loginEmail = contactsPopup.querySelector('#contact-email');
+  let contactsForm = contactsPopup.querySelector(".contacts-popup__form");
+  let loginName = contactsPopup.querySelector("#contact-name");
+  let loginEmail = contactsPopup.querySelector("#contact-email");
   contactsForm.addEventListener("submit", function (evt) {
     if (!loginName.value || !loginEmail.value) {
       evt.preventDefault();

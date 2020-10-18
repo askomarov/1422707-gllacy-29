@@ -101,12 +101,12 @@
           <use xlink:href="#logo-gllacy"></use>
         </svg>
       </a>
+
       <ul class="header__menu">
         <li class="header__menu-list">
           <a href="#" class="header__link header__link--active">Каталог</a>
           <ul class="header__submenu submenu-catalog">
             <li class="submenu-catalog__list submenu-catalog__list--title">
-              <!-- не понял ссылка это или просто текст -->
               <a class="submenu-catalog__head-text">Новинки</a>
             </li>
             <li class="submenu-catalog__list submenu-catalog__list--current">
@@ -123,12 +123,16 @@
             </li>
           </ul>
         </li>
-        <li class="header__menu-list header__menu-list--nopsevdo"><a class="header__link" href="blank.html">Доставка и
-            оплата</a></li>
-        <li class="header__menu-list header__menu-list--nopsevdo"><a class="header__link" href="price.html">О
+        <li class="header__menu-list header__menu-list--nopsevdo">
+          <a class="header__link" href="blank.html">Доставка и
+            оплата</a>
+        </li>
+        <li class="header__menu-list header__menu-list--nopsevdo">
+          <a class="header__link" href="price.html">О
             компании</a>
         </li>
       </ul>
+
       <ul class="header__actions header-actions">
         <li class="header-actions__list">
           <a href="#" class="header__link header-actions__link header-actions__link--search" aria-label="форма поиска">
@@ -145,7 +149,8 @@
           <a href="#" class="header__link header-actions__link header-actions__link--login">
             <svg width="20" height="19">
               <use xlink:href="#login-logo"></use>
-            </svg> Вход</a>
+            </svg> Вход
+          </a>
           <form class="header__submenu login-form" action="" method="post">
             <input class="login-form__input login-form__input--email main-input" type="email" name="login-mail"
               id="login-mail" placeholder="email@example.com" autocomplete="off" required>
@@ -174,12 +179,12 @@
                 d="M16.1027 20C17.2157 20 18.118 19.1046 18.118 18C18.118 16.8954 17.2157 16 16.1027 16C14.9896 16 14.0873 16.8954 14.0873 18C14.0873 19.1046 14.9896 20 16.1027 20Z" />
               <path class="svg-full-cart" d="M5.93506 4.02997L6.97297 13H17.5032L18.6923 4.02997H5.93506Z"
                 fill="#E84D37" />
-            </svg> 2 товара</a>
+            </svg> 2 товара
+          </a>
           <form action="" method="POST" class="header__submenu cart">
-            <!-- чтобы форма не отправлялась Пустой, можно добавить два инпута с типом hidden -->
             <input type="hidden" name="cart-item-1" value="ice-cream orange">
             <input type="hidden" name="cart-item-2" value="ice-cream strawberry">
-            <!-- не знаю что с ними делать, никогда неверстал корзины -->
+
             <ul class="cart__list">
               <li class="cart__item cart-item">
                 <button class="cart-item__remove-btn" type="button" aria-label="кнопка удалить">
@@ -206,12 +211,14 @@
                 <p class="cart-item__total">450 руб.</p>
               </li>
             </ul>
+
             <p class="cart__sum-text">Итого: <span class="cart__sum-cost">750</span>руб.</p>
             <button class="cart__btn-order main-btn" type="submit">Оформить заказ</button>
           </form>
         </li>
       </ul>
     </nav>
+
     <div class="header__contact container">
       <p class="header__contact-text">с 10 до 20, ежедневно</p>
       <a href="tel:88124502525" class="header__contact-tel">8 812 450-25-25</a>
@@ -233,14 +240,14 @@
             <a class="catalog__breadcrumbs-link catalog__breadcrumbs-link--active">Сливочное</a>
           </li>
         </ul>
+
         <h2 class="catalog__title">Сливочное мороженое</h2>
         <form action="https://echo.htmlacademy.ru/" method="POST" class="catalog__filter filter">
-          <!-- здесь будет фильтр -->
           <div class="filter__item">
             <h3 class="filter__heading">
               Сортировка:
             </h3>
-            <a href="#" class="select" aria-label="сортировка списка мороженого" focusable="true">
+            <a href="#" class="select" aria-label="сортировка списка мороженого">
               <div class="select__header">
                 <span class="select__option select__current">по популярности</span>
                 <div class="select__icon"></div>
@@ -253,6 +260,7 @@
               </div>
             </a>
           </div>
+
           <div class="filter__item item-price">
             <h3 class="filter__heading">Цена:</h3>
             <div class="item-price__price-box">
@@ -265,6 +273,7 @@
             </div>
             <div id="slider"></div>
           </div>
+
           <div class="filter__item">
             <h3 class="filter__heading">Жирность:</h3>
             <div class="filter__radio filter-radio">
@@ -279,6 +288,7 @@
               <label class="filter-radio__label" for="fat-over-30">выше 30%</label>
             </div>
           </div>
+
           <div class="filter__item filter__item--checkbox">
             <h3 class="filter__heading">Наполнители:</h3>
             <div class="filter__checkbox filter-checkbox">
@@ -299,6 +309,7 @@
           </div>
           <button class="filter__btn" type="submit">Применить</button>
         </form>
+
         <ul class="catalog__list">
           <li class="catalog__list-item ice-item">
             <img class="ice-item__img" src="img/ice-item-1.jpg" width="267" height="267" alt="Сливочное с апельсином">
@@ -425,6 +436,7 @@
             </div>
           </li>
         </ul>
+
         <ul class="catalog__pagination catalog-pagination">
           <li class="catalog-pagination__list">
             <a

@@ -101,6 +101,7 @@
           <use xlink:href="#logo-gllacy"></use>
         </svg>
       </a>
+
       <ul class="header__menu">
         <li class="header__menu-list">
           <a class="header__link" href="catalog.html">Каталог</a>
@@ -125,6 +126,7 @@
         <li class="header__menu-list"><a class="header__link" href="blank.html">Доставка и оплата</a></li>
         <li class="header__menu-list"><a class="header__link" href="price.html">О компании</a></li>
       </ul>
+
       <ul class="header__actions header-actions">
         <li class="header-actions__list">
           <a href="#" class="header__link header-actions__link header-actions__link--search" aria-label="форма поиска">
@@ -171,11 +173,9 @@
                 fill="#E84D37" />
             </svg>
             Пусто</a>
-          <form action="" method="POST" class="header__submenu cart">
-            <!-- чтобы форма не отправлялась Пустой, можно добавить два инпута с типом hidden -->
+          <form action="https://echo.htmlacademy.ru" method="POST" class="header__submenu cart">
             <input type="hidden" name="cart-item-1" value="ice-cream orange">
             <input type="hidden" name="cart-item-2" value="ice-cream strawberry">
-            <!-- не знаю что с ними делать, никогда неверстал корзины -->
             <ul class="cart__list">
               <li class="cart__item cart-item">
                 <button class="cart-item__remove-btn" type="button" aria-label="кнопка удалить">
@@ -218,6 +218,7 @@
     <h2 class="visually-hidden">Главная страница магазина мороженого Глейси</h2>
     <section class="promo container">
       <div class="promo__slider slider-wrapper">
+
         <ul class="slider">
           <li class="slider-item slider-item--active">
             <div class="slider-item__images">
@@ -250,6 +251,7 @@
             <a href="#" class="slider-item__btn main-btn">Давайте оба!</a>
           </li>
         </ul>
+
         <ul class="promo__slider-dots">
           <li><button type="button" class="promo__slider-dot promo__slider-dot--current">1</button></li>
           <li><button type="button" class="promo__slider-dot">2</button></li>
@@ -352,10 +354,11 @@
       <ul class="news__banners container">
         <li class="news__banners-item blog-banner">
           <p class="blog-banner__text">Новое в нашем блоге</p>
-          <a href="" class="blog-banner__blog-link">10 способов сервировки фруктовых щербетов<br> к столу</a>
+          <a href="blank.html" target="_blank" class="blog-banner__blog-link">10 способов сервировки фруктовых
+            щербетов<br> к столу</a>
         </li>
         <li class="news__banners-item subscribe-banner">
-          <form class="subscribe-banner__form" action="" method="POST">
+          <form class="subscribe-banner__form" action="https://echo.htmlacademy.ru" method="POST">
             <p class="subscribe-banner__text">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего
               самого
               вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -375,12 +378,12 @@
           <p class="contacts__text">Для заказов по телефону:</p>
           <a class="contacts__tel-link" href="tel:88124502525">8 812 450-25-25</a>
           <p class="contacts__text">(с 10 до 20 ежедневно)</p>
-          <a class="contacts__btn main-btn" href="">Форма обратной связи</a>
+          <a class="contacts__btn main-btn" href="form.html">Форма обратной связи</a>
         </div>
       </div>
       <div id="map" class="contacts__map-wrapper">
-        <iframe class="contacts__map-frame" src="https://yandex.ru/map-widget/v1/-/CCQ~e4u8CB" width="1200" height="430"
-          allowfullscreen="true"></iframe>
+        <iframe class="contacts__map-frame" src="https://yandex.ru/map-widget/v1/-/CCQ~e4u8CB" width="1200"
+          height="430"></iframe>
         <img class="contacts__map-img" src="img/map.png" width="1200" height="430"
           alt="расположение магазина ул. Большая Конюшенная, 19/8, Санкт-Петербург" />
       </div>
@@ -453,7 +456,7 @@
   <section class="contacts-popup">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <div class="contacts-popup__body">
-      <a href="#" class="contacts-popup__close" aria-label="закрыть попап"></a>
+      <button type="button" class="contacts-popup__close" aria-label="закрыть попап"></button>
       <form class="contacts-popup__form" action="https://echo.htmlacademy.ru" method="post">
         <p class="contacts-popup__title">Мы обязательно вам ответим!</p>
         <label for="contact-name">
